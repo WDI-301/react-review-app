@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import IDontHaveToHaveTheSameName, {StringCounter, NewString} from './components/StringCounter';
-
+// default does not need to have the samed name, but it should.
+// {} for anything without default
 
 function App() {
   const [helloWorldState, setHelloWorldState] = useState('Hello World')
@@ -10,7 +11,7 @@ function App() {
 
 
   const makeAlert = (message) => {
-    alert(helloWorldState)
+    alert("The String's length is: " + inputString.length)
   }
 
   const thisSetsSomeState = () => {
@@ -41,7 +42,8 @@ function App() {
             inputString={inputString}
             inputHandler={(e) => inputHandler(e)}
           />
-          <StringCounter />
+          <StringCounter inputString={inputString} />
+          
           <button name='Alert' onClick={() => makeAlert("I got clicked!")}>Alert</button>
           <button name='changeState' onClick={thisSetsSomeState}>Guten Tag</button>
         </div>

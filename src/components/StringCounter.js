@@ -6,13 +6,15 @@ export const NewString = (props) => {
     )
 }
 
-export const StringCounter = () => {
+export const StringCounter = (props) => {
+  // count a string
+
   return (
-    <div>StringCounter</div>
+    <div>StringCounter: {props.inputString.length}</div>
   )
 }
 
-  
+// Demonstration, how default works
 export default function MyDefaultFunc() {
     return (
         <h1>Default</h1>
