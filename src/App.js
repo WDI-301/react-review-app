@@ -4,6 +4,7 @@ import './App.css';
 import IDontHaveToHaveTheSameName, {StringCounter, NewString} from './components/StringCounter';
 // default does not need to have the samed name, but it should.
 // {} for anything without default
+import CamelCase from './components/CamelCase'
 
 function App() {
   const [helloWorldState, setHelloWorldState] = useState('Hello World')
@@ -57,7 +58,16 @@ function App() {
           <IDontHaveToHaveTheSameName />
           <h2>inputString State: {inputString}</h2>
           <h2>String Var: {stringVar}</h2>
-          {/* insert camelCase component here */}
+          <CamelCase
+           name = "Input String" 
+            inputString = {inputString}
+            setInputString = {setInputString}
+          />
+          <CamelCase
+            name = "Hello World"
+            inputString = {helloWorldState}
+            setInputString = {setHelloWorldState}
+          />
           <NewString 
             inputString={inputString}
             inputHandler={(e) => inputHandler(e)}
